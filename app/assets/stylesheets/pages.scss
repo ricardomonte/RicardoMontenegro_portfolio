@@ -1,0 +1,126 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import 'mixin';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,700;1,300;1,400&display=swap');
+
+body {
+  margin: 0;
+}
+
+.container-landing {
+  @include d-flex-column;
+  position: relative;
+
+  background: linear-gradient(180deg, rgba(75, 75, 75, 0) 0%, #4B4B4B 100%), #4a148c;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Ubuntu Condensed', sans-serif;
+
+
+  .container-text__first {
+    z-index: 1;
+    @include d-flex;
+
+    height: 80px;
+  
+    .first-text {
+      @include landing-text;
+      
+      span {
+        color: #568c14;
+      }
+    }
+
+  }
+  .container-text__second {
+    @extend .container-text__first;
+
+    .second-text {
+      @include landing-text;
+    }
+  }
+
+  .container-text__third {
+    @extend .container-text__first;
+
+    .third-text{
+      @include landing-text;
+    }
+  }
+
+  .btn-mywork {
+    @extend .container-text__first;
+
+    border: 2px solid #568c14;
+    border-radius: 1rem;
+
+    .my-work {
+      @include landing-text;
+
+      @include links;
+      padding: 1.5rem 7.5rem;
+    }
+  }
+}
+.container-port {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Ubuntu Condensed', sans-serif;
+
+  .container-title {
+    @include d-flex;
+
+    height: 80px;
+
+    .title {
+      @include landing-text;
+    }
+  }
+
+  .container-soft__img {
+    @include d-flex;
+
+    width: 100%; 
+    height: 60%;
+
+    .container-image {
+      width: 15%;
+      height: 250px;
+
+      .img {
+        width: 100%;
+        padding-bottom: 100%;
+        background-image: url(https://i.imgur.com/lbNtDf0.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        border: 2px solid #86148c;
+      }
+
+    }
+
+    .container-soft {
+      @include d-f-around;
+      padding: 2rem 0 0 0;
+      align-items: flex-start;
+      height: 100%;
+      width: 75%;
+
+      .container-soft__skills {
+        width: 15%;
+        height: 300px;
+      }
+
+      .image-bdg {
+        display: block;
+        width: 150px;
+        height: 150px;
+        background-image: url(https://i.imgur.com/Kb8ZkaO.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
