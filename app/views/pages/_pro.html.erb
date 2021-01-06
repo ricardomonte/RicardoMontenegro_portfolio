@@ -1,13 +1,12 @@
 <div class='container-tools'>
+  <div class='container-icon' data-reflex="click->Something#again"><i class="fas fa-times fa-2x"></i></div>
   <div class='skills' >
     <% ola.each do | ol | %>
       <div class='one-skill'>
-        <div>
+        <div class='polygon'>
+        </div>
+        <div class="skill-text">
           <p><%= ol.name %></p>
-        </div>
-        <div class='triangle'>
-        </div>
-        <div>
           <p><%= ol.description %></p>
         </div>
       </div>
