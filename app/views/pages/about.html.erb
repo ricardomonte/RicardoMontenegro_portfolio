@@ -1,0 +1,21 @@
+<div class='container-port'>
+  <div class='container-title'>
+    <h1 class='title' id='ab'>About</h1>
+  </div>
+  <div class='container-soft__img'>
+    <div class='container-image'>
+      <div class="img"></div>
+    </div>
+    <div class='container-soft'>
+      <% skills.each do |s| %>
+        <div class="container-soft__skills">
+          <%= link_to "#", data: { reflex: 'click->Something#bye', id: s.id} do %>
+            <div class="image-bdg"></div>
+          <% end %>
+        </div>
+      <% end %>
+      <div id='chan'>
+      </div>
+    </div>
+  </div>
+</div>

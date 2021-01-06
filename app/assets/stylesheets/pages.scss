@@ -66,8 +66,14 @@ body {
 }
 .container-port {
   height: 100vh;
-  width: 100vw;
+  width: calc(100vw - 150px);
   font-family: 'Ubuntu Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
 
   .container-title {
     @include d-flex;
@@ -107,10 +113,10 @@ body {
       align-items: flex-start;
       height: 100%;
       width: 75%;
+      flex-wrap: wrap;
 
       .container-soft__skills {
         width: 15%;
-        height: 300px;
       }
 
       .image-bdg {
@@ -122,5 +128,38 @@ body {
         background-repeat: no-repeat;
       }
     }
+  }
+
+  .container-tools {
+    margin-top: 3rem;
+    width: 68rem;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .one-skill {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 300px 100px;
+    border-color: transparent transparent #007bff transparent;
   }
 }

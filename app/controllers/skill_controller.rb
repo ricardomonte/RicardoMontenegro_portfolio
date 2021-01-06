@@ -1,6 +1,6 @@
 class SkillController < ApplicationController
 
-  def show
-    @skill = Skill.find(params[:id])
+  def index
+    @skills = Skill.all
   end
 end
