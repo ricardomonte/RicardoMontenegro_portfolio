@@ -63,6 +63,14 @@ body {
       padding: 1.5rem 7.5rem;
     }
   }
+
+  .scroll-down {
+    text-align: center;
+
+    .arrow-down {
+      color: #568c14;
+    }
+  }
 }
 
 .all-inside {
@@ -96,20 +104,41 @@ body {
       
       align-items: flex-start;
       width: 100%; 
-      height: 60%;
+      height: 100%;
   
       .container-image {
-        width: 15%;
-        height: 250px;
+        width: 250px;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
   
         .img {
+          width: 245px;
+          height: 245px;
+          clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+        .img-author {
           width: 100%;
-          padding-bottom: 100%;
-          background-image: url(https://i.imgur.com/lbNtDf0.jpg);
-          background-size: cover;
-          background-position: center;
-          border-radius: 50%;
-          border: 2px solid #86148c;
+          height: 100%;
+          object-fit: cover;
+          object-position: right;
+        }
+
+        .contact-list {
+          width: 100%;
+          list-style: none;
+          display: flex;
+          justify-content: space-evenly;
+        }
+
+        .contact-link {
+          color: #cfccc5;
+          &:hover {
+            color: #4a148c;
+          }
         }
   
       }
@@ -162,7 +191,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color:  #4a148c ;
+    background-color:  #4B4355 ;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 1.5% 95%, 0 90%, 1.5% 85%, 0 80%, 1.5% 75%, 0 70%, 1.5% 65%, 0 60%, 1.5% 55%, 0 50%, 1.5% 45%, 0 40%, 1.5% 35%, 0 30%, 1.5% 25%, 0 20%, 1.5% 15%, 0 10%, 1.5% 5%, 0 0% );
   }
 
@@ -186,19 +215,51 @@ body {
   .one-skill {
     width: 80%;
     display: flex;
+
     justify-content: space-between;
     margin: 20px 0 0 0;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
+    background-color: white;
   }
 
   .polygon {
     width: 50%;
     height: 400px;
-    background-image: url(https://i.imgur.com/lbNtDf0.jpg);
+    clip-path: polygon(100% 0%, 94% 52%, 100% 100%, 0 100%, 0% 50%, 0 0);
+  
+    .img-project {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .polygon1 {
+    width: 50%;
+    height: 400px;
+    background-image: url(https://i.imgur.com/qhxq1z8.png);
     background-position: center;
     background-size: cover;
-    clip-path: polygon(100% 0%, 64% 52%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    clip-path: polygon(100% 0%, 94% 52%, 100% 100%, 0 100%, 0% 50%, 0 0);
+  }
+
+  .polygon2 {
+    width: 50%;
+    height: 400px;
+    background-image: url(https://i.imgur.com/aXIfs1k.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(100% 0%, 94% 52%, 100% 100%, 0 100%, 0% 50%, 0 0);
+  }
+
+  .polygon3 {
+    width: 50%;
+    height: 400px;
+    background-image: url(https://ouch-cdn.icons8.com/thumb/27/579beb93-e9e4-4fb6-a0fe-51e64e0903b6.png);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(100% 0%, 94% 52%, 100% 100%, 0 100%, 0% 50%, 0 0);
   }
 
   .skill-text {

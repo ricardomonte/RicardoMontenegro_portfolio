@@ -5,13 +5,26 @@
     </div>
     <div class='container-soft__img'>
       <div class='container-image'>
-        <div class="img"></div>
+        <div class="img">
+          <%= image_tag("ricardomontenegro.jpg", class: 'img-author') %>
+        </div>
+        <div class='container-bio'>
+          <h2 class='bio'>Full-stack developer, Designer and dog lover</h2>
+          <p>Current student at Microverse, chilean, but living in Serbia.</p>
+        </div>
+        <div class="container-contact">
+          <ul class='contact-list'>
+            <li class='contact'><a class='contact-link' href="#"><i class="fab fa-github-square fa-3x"></i></a></li>
+            <li class='contact'><a class='contact-link' href="#"><i class="fab fa-linkedin fa-3x"></i></a></li>
+            <li class='contact'><a class='contact-link' href="#"><i class="fab fa-twitter-square fa-3x"></i></a></li>
+          </ul>
+        </div>
       </div>
       <div class='container-soft'>
         <% skills.each do |s| %>
           <div class="container-soft__skills">
             <%= link_to "#", data: { reflex: 'click->Something#bye', id: s.id} do %>
-              <div class="image-bdg"></div>
+              <%= image_tag("#{s.name}.png") %>
             <% end %>
           </div>
         <% end %>

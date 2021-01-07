@@ -2,6 +2,7 @@ class SomethingReflex < ApplicationReflex
   def hello
     all_skill = Skill.all
     morph "#he", render('pages/about', locals: {skills: all_skill})
+    morph "#arrow-content", render( partial: 'display-arrow')
   end
 
   def bye
