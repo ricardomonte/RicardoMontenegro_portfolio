@@ -126,8 +126,16 @@ body {
           object-fit: cover;
           object-position: right;
         }
+        .container-bio {
+          text-align: center;
+        }
+
+        .container-contact {
+          width: 100%;
+        }
 
         .contact-list {
+          padding: 0;
           width: 100%;
           list-style: none;
           display: flex;
@@ -147,7 +155,7 @@ body {
         @include d-f-around;
         padding: 2rem 0 0 0;
         align-items: flex-start;
-        height: 100%;
+        height: 95%;
         width: 75%;
         flex-wrap: wrap;
   
