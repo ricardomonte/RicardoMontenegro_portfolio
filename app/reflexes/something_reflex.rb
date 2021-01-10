@@ -6,9 +6,9 @@ class SomethingReflex < ApplicationReflex
   end
 
   def bye
-    skill = Skill.find(2)
+    skill = Skill.find(element.dataset[:id].to_i)
 
-    morph '#chan', render( partial: 'pro', locals: { ola: skill.projects }) 
+    morph '#chan', render( partial: 'pages/pro', locals: { ola: skill.projects }) 
   end
 
   def again
