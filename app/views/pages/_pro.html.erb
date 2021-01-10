@@ -1,0 +1,16 @@
+<div class='container-tools'>
+  <div class='container-icon' data-reflex="click->Something#again"><i class="fas fa-times fa-2x"></i></div>
+  <div class='skills'>
+    <% ola.each do | pro |%>
+      <div class='one-skill'>
+       <div class='polygon'>
+        <%= image_tag("#{pro.name}.png", class: "img-project", alt: "#{pro.name} project") %>
+       </div>
+       <div class="skill-text">
+         <p><%= pro.name %></p>
+         <p><%= pro.description %></p>
+       </div>
+     </div>
+    <% end %>
+  </div>
+</div>

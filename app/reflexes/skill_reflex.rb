@@ -1,0 +1,3 @@
+class SkillReflex < ApplicationReflex
+ 
+end
