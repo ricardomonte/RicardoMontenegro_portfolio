@@ -242,37 +242,39 @@ body {
       object-fit: cover;
     }
   }
-
-  .polygon1 {
-    width: 50%;
-    height: 400px;
-    background-image: url(https://i.imgur.com/qhxq1z8.png);
-    background-position: center;
-    background-size: cover;
-    clip-path: polygon(100% 0%, 94% 52%, 100% 100%, 0 100%, 0% 50%, 0 0);
-  }
-
-  .polygon2 {
-    width: 50%;
-    height: 400px;
-    background-image: url(https://i.imgur.com/aXIfs1k.jpg);
-    background-position: center;
-    background-size: cover;
-    clip-path: polygon(100% 0%, 94% 52%, 100% 100%, 0 100%, 0% 50%, 0 0);
-  }
-
-  .polygon3 {
-    width: 50%;
-    height: 400px;
-    background-image: url(https://ouch-cdn.icons8.com/thumb/27/579beb93-e9e4-4fb6-a0fe-51e64e0903b6.png);
-    background-position: center;
-    background-size: cover;
-    clip-path: polygon(100% 0%, 94% 52%, 100% 100%, 0 100%, 0% 50%, 0 0);
-  }
-
+  
   .skill-text {
     font-family: 'Ubuntu Condensed', sans-serif;
     width: 50%;
     text-align: center;
+  }
+
+  .project-text {
+    height: 70%;
+  }
+
+  .live-demo {
+    height: 30%;
+
+    a {
+      text-decoration: none;
+      color: #cfccc5;
+      display: inline-block;
+      padding: 0.25em 0.4em;
+      font-size: 75%;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: 0.25rem;
+      background-color: #4B4355;
+      padding-right: 0.6em;
+      padding-left: 0.6em;
+      border-radius: 10rem;
+      &:hover {
+        background-color: #568c14;
+      }
+    }
   }
 }

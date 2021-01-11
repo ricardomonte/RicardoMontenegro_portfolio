@@ -7,8 +7,13 @@
         <%= image_tag("#{pro.name}.png", class: "img-project", alt: "#{pro.name} project") %>
        </div>
        <div class="skill-text">
-         <p><%= pro.name %></p>
-         <p><%= pro.description %></p>
+        <div class='project-text'>
+          <p><%= pro.name %></p>
+          <p><%= pro.description %></p>
+        </div>
+        <div class="live-demo">
+          <a href=<%= pro.live %>>Live Demo</a>
+        </div>
        </div>
      </div>
     <% end %>
