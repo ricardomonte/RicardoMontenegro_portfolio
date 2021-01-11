@@ -4,6 +4,7 @@
 
 @import 'mixin';
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,700;1,300;1,400&display=swap');
+@import 'breakpoints';
 
 body {
   margin: 0;
@@ -28,6 +29,10 @@ body {
     .first-text {
       @include landing-text;
       
+      @include media('<=phone') {
+        @include landing_text_phone;
+      }
+
       span {
         color: #568c14;
       }
@@ -39,6 +44,10 @@ body {
 
     .second-text {
       @include landing-text;
+
+      @include media('<=phone') {
+        @include landing_text_phone;
+      }
     }
   }
 
@@ -47,6 +56,10 @@ body {
 
     .third-text{
       @include landing-text;
+
+      @include media('<=phone') {
+        @include landing_text_phone;
+      }
     }
   }
 
@@ -56,10 +69,18 @@ body {
     border: 2px solid #568c14;
     border-radius: 1rem;
 
+    @include media('<=phone') {
+      width: 50%;
+    }
+
     .my-work {
       @include landing-text;
 
       @include links;
+      @include media('<=phone') {
+        @include landing_text_phone;
+      }
+
       padding: 1.5rem 7.5rem;
     }
   }
@@ -74,9 +95,12 @@ body {
 }
 
 .all-inside {
-  width: 99vw;
+  width: 100%;
   height: 100vh;
   position: relative;
+
+  @include media('<=phone') {
+  }
 
   .container-port {
     height: 100%;
@@ -88,6 +112,10 @@ body {
     align-content: center;
     margin-left: auto;
     margin-right: auto;
+
+    @include media('<=desktop') {
+      width: calc(100% - 50px)
+    }
   
     .container-title {
       @include d-flex;
@@ -96,6 +124,11 @@ body {
   
       .title {
         @include landing-text;
+
+        @include media('<=phone') {
+          @include landing_text_phone;
+          margin: 0.2rem 0 0.2rem 0
+        }
       }
     }
   
@@ -105,6 +138,12 @@ body {
       align-items: flex-start;
       width: 100%; 
       height: 100%;
+
+      @include media('<=phone') {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+      }
   
       .container-image {
         width: 250px;
@@ -113,11 +152,31 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @include media('<=phone') {
+          width: 150px;
+          height: 60%;
+        }
+
+        @include media('>phone', '<=1092px') {
+          width: 170px;
+          height: 60%;
+        }
   
         .img {
           width: 245px;
           height: 245px;
           clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+          @include media('<=phone') {
+            width: 150px;
+            height: 150px;
+          }
+
+          @include media('>phone', '<=1092px') {
+            width: 170px;
+            height: 170px;
+          }
         }
 
         .img-author {
@@ -153,24 +212,55 @@ body {
   
       .container-soft {
         @include d-f-around;
-        padding: 2rem 0 0 0;
         align-items: flex-start;
-        height: 95%;
+        height: 60%;
         width: 75%;
         flex-wrap: wrap;
+
+        @include media('<=phone') {
+          width: 100%;
+          padding: 0;
+        }
+
+        @include media('>phone', '<=578px') {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+        }
   
         .container-soft__skills {
-          width: 15%;
+          max-width: min-content;
+          max-height: min-content;
+
+          @include media('<=phone') {
+            width: 100%;
+            max-height: min-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+          }
         }
-  
-        .image-bdg {
-          display: block;
-          width: 150px;
-          height: 150px;
-          background-image: url(https://i.imgur.com/Kb8ZkaO.png);
-          background-size: contain;
-          background-repeat: no-repeat;
+
+        .badges-skilss {
+          @include media('<=phone') {
+            width: 115px;
+            height: 115px;
+          }
+
+          @include media('>phone', '<=tablet') {
+            width: 119px;
+            height: 119px;
+          }
+
+          @include media('>tablet', '<=desktop') {
+            width: 140px;
+            height: 140px;
+          }
+
         }
+
       }
     }
   
@@ -192,6 +282,23 @@ body {
     left: 28%;
     z-index: 0;
     width: calc(100% - 27%);
+
+    @include media('<=phone') {
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    @include media('>phone', '<=tablet') {
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    @include media('>tablet', '<=1092') {
+      left: 32%;
+      width: calc(100% - 31%);
+    }
   }
 
   .container-tools {
@@ -201,6 +308,14 @@ body {
     justify-content: center;
     background-color:  #4B4355 ;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 1.5% 95%, 0 90%, 1.5% 85%, 0 80%, 1.5% 75%, 0 70%, 1.5% 65%, 0 60%, 1.5% 55%, 0 50%, 1.5% 45%, 0 40%, 1.5% 35%, 0 30%, 1.5% 25%, 0 20%, 1.5% 15%, 0 10%, 1.5% 5%, 0 0% );
+
+    @include media('<=phone') {
+      clip-path: none;
+    }
+
+    @include media('>phone', '<=tablet') {
+      clip-path: none;
+    }
   }
 
   .container-icon {
@@ -209,6 +324,7 @@ body {
     width: max-content;
     top: 2%;
     right: 2%;
+    z-index: 1;
     cursor: pointer;
   }
 
@@ -218,6 +334,14 @@ body {
     align-items: center;
     justify-content: space-around;
     width: 100%;
+
+    @include media('<=phone') {
+      height: calc(100% - 4%);
+    }
+
+    @include media('>phone', '<=tablet') {
+      height: calc(100% - 4%);
+    }
   }
 
   .one-skill {
@@ -228,13 +352,46 @@ body {
     margin: 20px 0 0 0;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
-    background-color: white;
+    background-color: #cfc5cd;
+
+    @include media('<=phone') {
+      width: 100%;
+      position: relative;
+      clip-path: none;
+    }
+
+    @include media('>phone', '<=578px') {
+      width: 100%;
+      position: relative;
+      clip-path: none;
+    }
+
+    @include media('>578px', '<=tablet') {
+      width: 90%;
+      position: relative;
+    }
   }
 
   .polygon {
     width: 50%;
     height: 400px;
     clip-path: polygon(100% 0%, 94% 52%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    
+    @include media('<=phone') {
+      width: 100%;
+      clip-path: none;
+    }
+
+    @include media('>phone', '<=578px') {
+      width: 100%;
+      clip-path: none;
+    }
+
+    @include media('>578px', '<=tablet') {
+      width: 100%;
+      clip-path: none;
+    }
+
   
     .img-project {
       width: 100%;
@@ -247,6 +404,54 @@ body {
     font-family: 'Ubuntu Condensed', sans-serif;
     width: 50%;
     text-align: center;
+
+    @include media('<=phone') {
+      opacity: 0;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(207, 197, 205, 0.8);
+
+      &:hover {
+        opacity: 1;
+        transition: ease 1s;
+      }
+    }
+
+    @include media('>phone', '<=578px') {
+      opacity: 0;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(207, 197, 205, 0.8);
+
+      &:hover {
+        opacity: 1;
+        transition: ease 1s;
+      }
+    }
+
+    @include media('>578px', '<=tablet') {
+      opacity: 0;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(207, 197, 205, 0.8);
+
+      &:hover {
+        opacity: 1;
+        transition: ease 1s;
+      }
+    }
   }
 
   .project-text {

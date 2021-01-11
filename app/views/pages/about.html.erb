@@ -24,7 +24,7 @@
         <% skills.each do |s| %>
           <div class="container-soft__skills">
             <%= link_to "#", data: { reflex: 'click->Something#bye', id: s.id} do %>
-              <%= image_tag("#{s.name}.png") %>
+              <%= image_tag("#{s.name}.png", class: 'badges-skilss') %>
             <% end %>
           </div>
         <% end %>
